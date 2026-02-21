@@ -14,12 +14,19 @@ public class Main {
                 new Student("Jolene", 4.0, 5),
                 new Student("Emilee", 3.9, 6)
         };
-
+/**
+ * you can make this printing code more compact and readable by using short for-loops and reusing methods
+ * here is an example
+ * System.out.println("--- Original Order ---");
+ * for (Student s : students) System.out.println(s);
+ *
+ * i would also suggest that you could make the print statements single lined so as to make it more readable
+ */
         // Original order
         System.out.printf(
                 "Original Order of Students:\n%s\n\n",
     getStudentsAsLines(students)
-        );
+        ); /// for-loop here
 
     // Sorted by GPA
     Student[] sortedStudents =
@@ -28,7 +35,7 @@ public class Main {
         System.out.printf(
                 "Students Sorted by GPA:\n%s\n\n",
     getStudentsAsLines(sortedStudents)
-        );
+        ); /// combination of copySortedByGpaDesc() and a for-loop
 
     // Top 3 students
     Student[] topThreeStudents =
@@ -37,7 +44,7 @@ public class Main {
         System.out.printf(
                 "Top 3 Students by GPA:\n%s\n\n",
     getStudentsAsLines(topThreeStudents)
-        );
+        ); /// combination of topNByGpa() and a for-loop
 
     // Find existing ID
         System.out.printf(
@@ -56,7 +63,7 @@ public class Main {
 
         System.out.println("\nModule 1 Demo Complete!");
 }
-
+///  this function is not really needed since it makes it loop complex than it actually is
 // Helper method for formatting output
 private static String getStudentsAsLines(Student[] students) {
     StringBuilder sb = new StringBuilder();

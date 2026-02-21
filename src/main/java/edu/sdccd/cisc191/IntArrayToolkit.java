@@ -19,6 +19,7 @@ public class IntArrayToolkit {
      */
     public static int sum(int[] a) {
         if (a == null) {
+            ///  I'd suggest to write a message in the exception to explain why the exception is thrown
             throw new IllegalArgumentException();
         }
 
